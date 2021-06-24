@@ -16,7 +16,7 @@ class Generator:
 
     @staticmethod
     def word():
-        return choice([self.adjective(), self.noun()])
+        return choice([Generator.adjective(), Generator.noun()])
 
     @staticmethod
     def number(length=3):
@@ -31,15 +31,18 @@ class Generator:
         )
 
     @staticmethod
-    def sep():
-        return choice(separators)
+    def sep(seps=None):
+        return choice(seps or separators)
 
     def generate(self, complexity=4, sep=None, use_number=True):
         pattern = self.choose_pattern(complexity, use_number)
         password = []
+        seps = None
+        if isinstance(sep, (list, tuple)):
+            seps = sep
         for i in range(complexity):
             password.extend([
-                sep or self.sep(),
+                sep or self.sep(seps),
                 pattern[i]
             ])
         return "".join(password[:-1])

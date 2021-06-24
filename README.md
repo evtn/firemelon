@@ -43,7 +43,8 @@ print(passgen(complexity=2, sep=":", use_number=False)) # "idea:night"
 ```
 
 Complexity just sets how much parts the result will have, and sep is a separator between parts.    
-If you won't pass `sep`, every separator in password would be chosen at random.    
+If you won't pass `sep`, every separator would be chosen at random.    
+If you will pass a list of separators as `sep`, every separator would be chosen at random from your list.    
 `use_number` is pretty straightforward.
 
 ### Generator
