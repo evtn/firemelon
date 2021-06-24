@@ -52,7 +52,7 @@ class Generator:
         seps = [sep] if isinstance(sep, str) else (sep or separators)
         sep_variance = len(seps)
         if use_number and complexity > 2:
-            number_variance = (1000 + 10 ** complexity) * (complexity - 2) // 2
+            number_variance = sum(10 ** x for x in range(3, complexity + 1))
             return (word_variance * sep_variance) ** (complexity - 1) * number_variance * complexity
         
         return sep_variance ** (complexity - 1) * word_variance ** complexity
