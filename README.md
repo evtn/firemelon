@@ -11,9 +11,9 @@ This module is doing exactly that - creating passwords using random words and, s
 ### Is it really strong?
 
 - It is pretty diverse:
-    - With default settings (`complexity=4, sep=random`) you get `5687377896504960` different passwords
-    - With one specific separator (or no separator at all) you get `975201971280` different passwords - significantly less, still many.
-    - With one specific separator (or no separator at all) and `complexity=3` you get `2636311808` different passwords - still many.
+    - With default settings (`complexity=4, sep=random`) you get `5513210562816000` different passwords
+    - With one specific separator (or no separator at all) you get `945337888000` different passwords - significantly less, still many.
+    - With one specific separator (or no separator at all) and `complexity=3` you get `231852000` different passwords - still many.
 - You definitely should use 2FA for important accounts, no matter how strong is your password.
 - Decent services should have a cooldown for too many wrong password attempts
 - Most passwords are stolen (e.g. with phishing), not brute-forced, those have nothing to do with password strength
@@ -58,6 +58,19 @@ password = "".join([gen.adjective(), " ", gen.noun(), gen.sep(), gen.number(3)])
 
 print(password)
 ```
+
+### .variance
+
+Generator has a `variance` method with exactly the same signature as `generate`, but which returns a number of variations for specific arguments.
+
+```python
+from firemelon import Generator
+
+gen = Generator()
+print(gen.variance()) # 5513210562816000
+
+```
+
 
 ## Contributing
 

@@ -7,7 +7,7 @@ Information about the current version of firemelon package.
 
 __title__ = "firemelon"
 __description__ = "firemelon — Simple Password Generator"
-__version__ = "1.1.0"
+__version__ = "1.1.1"
 __author__ = "evtn"
 __author_email__ = "g@evtn.ru"
 __license__ = "MIT License"

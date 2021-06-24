@@ -47,9 +47,19 @@ class Generator:
             ])
         return "".join(password[:-1])
 
+    def variance(self, complexity=4, sep=None, use_number=True):
+        word_variance = len(nouns) + len(adjectives)
+        seps = [sep] if isinstance(sep, str) else (sep or separators)
+        sep_variance = len(seps)
+        if use_number and complexity > 2:
+            number_variance = (1000 + 10 ** complexity) * (complexity - 2) // 2
+            return (word_variance * sep_variance) ** (complexity - 1) * number_variance * complexity
+        
+        return sep_variance ** (complexity - 1) * word_variance ** complexity
+
     def choose_pattern(self, complexity, use_number):
         if complexity < 3:
-            return [self.word(), self.noun]
+            return [self.word(), self.noun()][:complexity]
 
         pattern = [self.word() for _ in range(self.complexity - 1)]
         pattern.insert(
