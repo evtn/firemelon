@@ -2,11 +2,11 @@
 
 ## Why?
 
-Passwords don't have to be something like `GY/hyTJmw#B$E3,x`.
-Simple combinations like `sure,happy,95194,sad` or `2874;people;only;penguin` are also pretty strong (see below).
-But those are also easy to remember (and you can even turn it into some drawing to remember while still keeping it a secret)
+Passwords don't have to be something like `GY/hyTJmw#B$E3,x`.    
+Simple combinations like `sure,happy,95194,sad` or `2874;people;only;penguin` are also pretty strong (see below).    
+But those are also easy to remember (and you can even turn it into some drawing to remember while still keeping it a secret)    
 
-This module is doing exactly that - creating passwords using random words and, sometimes, numbers.
+This module is doing exactly that - creating passwords using random words and, sometimes, numbers.    
 
 ### Is it really strong?
 

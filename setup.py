@@ -11,8 +11,8 @@ here = os.path.abspath(os.path.dirname(__file__))
 with open(os.path.join(here, 'firemelon', '__version__.py')) as f:
     exec(f.read(), about)
 
-# load the README file and use it as the long_description for PyPI
-with open('README.md', 'r') as f:
+# load the readme file and use it as the long_description for PyPI
+with open('readme.md', 'r') as f:
     readme = f.read()
 
 # package configuration - for reference see:
