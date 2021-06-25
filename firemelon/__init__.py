@@ -42,8 +42,8 @@ class Generator:
             seps = sep
         for i in range(complexity):
             password.extend([
+                pattern[i],
                 sep or self.sep(seps),
-                pattern[i]
             ])
         return "".join(password[:-1])
 
