@@ -61,7 +61,7 @@ class Generator:
         if complexity < 3:
             return [self.word(), self.noun()][:complexity]
 
-        pattern = [self.word() for _ in range(self.complexity - 1)]
+        pattern = [self.word() for _ in range(complexity - 1)]
         pattern.insert(
             choice(range(complexity)),
             self.number(
